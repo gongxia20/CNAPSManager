@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  CNAPSManager
+//
+//  Created by James on 2019/3/6.
+//  Copyright © 2019 James. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
+
+/** 尺寸宏 */
+#define IPhone5_OR_later [UIScreen mainScreen].bounds.size.height >= 568
+#define IPhone5_OR_before [UIScreen mainScreen].bounds.size.height <= 568
+
+#define IPhone6_OR_later [UIScreen mainScreen].bounds.size.height >= 667
+#define IPhone6_OR_before [UIScreen mainScreen].bounds.size.height <= 667
+
+
+#import "GXFmdbManager.h"
+#import "UIView+Frame.h"
+#import "Constants.h"
+
+#endif /* PrefixHeader_pch */

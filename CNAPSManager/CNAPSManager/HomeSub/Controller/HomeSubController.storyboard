@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vDC-sc-86l">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Sub Controller-->
+        <scene sceneID="AZV-NM-Knn">
+            <objects>
+                <viewController storyboardIdentifier="HomeSubControllerID" id="vDC-sc-86l" customClass="HomeSubController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7mb-1L-afG"/>
+                        <viewControllerLayoutGuide type="bottom" id="D46-n2-aby"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9kE-Z6-hpw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="subProvinceCellIdentifier" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OZt-uy-tNy">
+                                <rect key="frame" x="0.0" y="20" width="120" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="C7I-Tr-ojd"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="vDC-sc-86l" id="aeg-eY-nHi"/>
+                                    <outlet property="delegate" destination="vDC-sc-86l" id="Y2P-ha-RVq"/>
+                                </connections>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="subCityCellIdentifier" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fJr-xZ-w0n">
+                                <rect key="frame" x="120" y="20" width="255" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vDC-sc-86l" id="Gq0-Pj-jB2"/>
+                                    <outlet property="delegate" destination="vDC-sc-86l" id="PbU-p8-oAI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99008148910000005" green="0.8043608069" blue="0.02340256609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OZt-uy-tNy" firstAttribute="top" secondItem="7mb-1L-afG" secondAttribute="bottom" id="14D-nT-KDo"/>
+                            <constraint firstAttribute="trailing" secondItem="fJr-xZ-w0n" secondAttribute="trailing" id="AFR-J2-oZ4"/>
+                            <constraint firstItem="D46-n2-aby" firstAttribute="top" secondItem="fJr-xZ-w0n" secondAttribute="bottom" id="ZrG-uk-SAL"/>
+                            <constraint firstItem="D46-n2-aby" firstAttribute="top" secondItem="OZt-uy-tNy" secondAttribute="bottom" id="fPn-fI-ITD"/>
+                            <constraint firstItem="OZt-uy-tNy" firstAttribute="leading" secondItem="9kE-Z6-hpw" secondAttribute="leading" id="uVp-O9-vX4"/>
+                            <constraint firstItem="fJr-xZ-w0n" firstAttribute="top" secondItem="7mb-1L-afG" secondAttribute="bottom" id="vHx-6C-efL"/>
+                            <constraint firstItem="fJr-xZ-w0n" firstAttribute="leading" secondItem="OZt-uy-tNy" secondAttribute="trailing" id="y98-Kn-LQP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="subCityTable" destination="fJr-xZ-w0n" id="ibn-y3-cDO"/>
+                        <outlet property="subProvinceTable" destination="OZt-uy-tNy" id="bhH-ts-CAn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sS0-PJ-N3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+</document>
